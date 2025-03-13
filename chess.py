@@ -34,14 +34,14 @@ class Chess():
         else:
             return True
 
-    ####heavy GPT assist
+    ####GPT assist
     def is_straight_line_move(self,piece: ChessPiece, new_position: Tuple[int, int], board: ChessBoard) -> bool:
         """Check if the move is a straight line and if path is clear."""
         row_diff = new_position[0] - piece.position[0]
         col_diff = new_position[1] - piece.position[1]
 
         if row_diff != 0 and col_diff != 0:
-            print('Not a straight line move')
+            #print('Not a straight line move')
             return False  # Not a straight line move
 
         step_row = 0 if row_diff == 0 else (1 if row_diff > 0 else -1)
